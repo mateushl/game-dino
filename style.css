@@ -1,0 +1,49 @@
+.dino {
+  position: absolute;
+  width: 60px; /*Tamanho do dino*/
+  height: 60px;
+  background-image: url(imagens/dino.png);
+  bottom: 0px; /*Dino colado no fundo*/
+}
+
+.obstacle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url(imagens/cactus.png);
+  bottom: 0px;
+}
+
+#desert {
+  position: absolute;
+  bottom: 0px;
+  background-image: url(imagens/bg.png);
+  /*repetindo na horizontal */
+  background-repeat: repeat-x;
+  /*velocidade do chão*/
+  animation: slideright 600s infinite linear;
+  -webkit-animation: slideright 600s infinite linear;
+  width: 100%;
+  /*altura*/
+  height: 200px;
+}
+
+/*slider fazendo movimento do chão*/
+@keyframes slideright {
+  from {
+    background-position: 70000%;
+  }
+  to {
+    bakground-position: 0%;
+  }
+}
+
+/* renderização para alguns navegadores */
+@-webkit-keyframes slideright {
+  from {
+    background-position: 70000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
